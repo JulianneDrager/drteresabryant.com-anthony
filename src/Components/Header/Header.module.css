@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:wght@400;700&family=Montserrat:ital,wght@0,100;0,300;0,500;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*p {
+    font-family: arial black, arial-w01-black, arial-w02-black, arial-w10 black,
+        sans-serif;
+}
+
+.HeaderImage {
+    width: 100%;
+}
+
+.btnMobile {
+    background-color: transparent;
+    font-family: "Didact Gothic";
+    color: black;
+    border: none;
+    font-size: small;
+    padding: .1rem;
+}
+
+.btnMobile:hover {
+    color: #ad1f37;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {}
+
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}

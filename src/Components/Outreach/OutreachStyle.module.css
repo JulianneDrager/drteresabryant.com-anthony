@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:wght@400;700&family=Montserrat:ital,wght@0,100;0,300;0,500;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+
+.cardBody {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  padding: 0;
+}
+
+.cardWrapper {
+  border-radius: 0;
+  padding: 0 .4rem;
+  border: none;
+}
+
+.innerCardWrapper {
+  text-align: center;
+  border: none;
+}
+
+.musicTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #55c5d1;
+}
+
+.pastorAImg,
+.pastorBImg,
+.pastorCImg {
+  /* width: 100%;
+  height: auto; */
+  border-radius: 0;
+  /* margin-top: -5rem; */
+  filter: contrast(1.1);
+  background-color: #bac9d6;
+}
+
+.blurEffect{
+  backdrop-filter: blur(3px);
+}
+
+.glass,
+.glass2,
+.glass3 {
+  padding: .5rem 1rem;
+  background-image: url("../../images/mobile-events/card-back.png");
+  background-blend-mode: soft-light;
+  background-color: #ffffff3b;
+  background-size: 166%;
+  background-position: center 181px;
+  display: block;
+}
+
+.glass2 {
+  background-image: url("../../images/mobile-events/card-back-flipped.png");
+  background-blend-mode: revert;
+}
+
+.hrStyle {
+  opacity: 0;
+  margin-top: .1rem;
+}
+
+.subTextAA,
+.subTextAAA,
+.subTextBB {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  font-family: "Didact Gothic";
+  color: black;
+  /* text-shadow: black 0px 0px 2px; */
+  background-color: #110f1a;
+  margin-top: -1rem;
+}
+
+.subTextAA,
+.subTextAAA {
+  margin-top: -2px;
+}
+
+.subTextAAA {
+  margin-top: -19px;
+}
+
+.btn {
+  background-color: black;
+  font-family: arial;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  transition: .5s;
+  /* margin: 1.5rem; */
+  top: 1rem;
+  width: 12rem;
+  transition: 0.5s;
+  /* position: relative;
+  top: -5rem; */
+}
+
+.btn:hover {
+  background-color: #fdbc5394;
+  border: none;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.divider2 {
+  display: block;
+  width: 100%;
+  height: 28px;
+  background-image: url("../../images/mobile-events/divider-white.png");
+  background-size: 107%;
+  background-position: center;
+  position: relative;
+  background-color: transparent;
+  top: 5px;
+  padding: 2rem 0;
+  z-index: 1;
+}
+
+
+@media screen and (min-width:600px) {
+
+  .glass,
+  .glass2 {
+    padding: 3rem 4rem 3rem 4rem;
+  }
+
+  .divider2 {
+    top: -2.40rem
+  }
+
+}
+
+@media screen and (min-width:768px) {
+
+  .desktopRowReverse,
+  .desktopRow {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    height: 440px;
+  }
+
+  .desktopRow {
+    flex-direction: row;
+  }
+
+  .glass,
+  .glass2 {
+    padding: 1rem 0;
+  }
+
+  .divider2 {
+    display: none;
+  }
+
+  .cardWrapper {
+    margin-top: -.5rem;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .divider, .divider2, .divider3 {
+    display: none;
+  }
+
+  .divider2 {
+    display: none;
+  }
+
+  .innerCardWrapper,
+  .cardWrapper {
+    border: none;
+  }
+
+}

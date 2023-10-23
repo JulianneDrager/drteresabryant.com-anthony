@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:wght@400;700&family=Montserrat:ital,wght@0,100;0,300;0,500;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500&family=Six+Caps&display=swap');
+
+.clickHereBtn,
+.clickHereSowBtn {
+    text-transform: uppercase;
+    background-color: #000000;
+    text-transform: uppercase;
+    rotate: 0deg;
+    top: 0;
+    width: 14rem;
+    margin: 0.5rem 0 .5rem 0;
+    color: white;
+    overflow: hidden;
+    transition: 0.5s;
+    border: none;
+    padding: 1rem;
+}
+
+.clickHereSowBtn {
+    padding: .5rem;
+}
+
+.clickHereSowBtn:hover {
+    background-color: #000000;
+    cursor: initial;
+    border: none;
+    color: white;
+
+}
+
+.clickHereBtn:hover {
+    rotate: 0deg;
+    color: black;
+    background-color: #fdbc5394;
+    border: none;
+}
+
+.clickHereWrapper {
+    margin-top: 6px;
+}
+
+.cardWrapper,
+.cardChangeWrapper {
+    /* background-color: #ffffffd1; */
+    /* background-color: #ffffff00; */
+    padding: 1.5rem 1rem;
+    margin-top: -26px;
+    border-radius: .5rem;
+    color: white;
+    text-shadow: 1px 1px 20px black;
+    line-height: 1.2rem;
+}
+
+.supportStyle,
+.supportH2Style,
+.campSubTitleStyle,
+.campTitleStyle {
+    font-family: "Six Caps";
+    font-size: 4rem;
+    color: white;
+}
+
+.campSubTitleStyle {
+    padding: 1rem 0 0 0;
+    font-size: 1rem;
+    font-family: "Oswald";
+}
+
+.campTitleStyle {
+    margin: -1rem 0 .8rem 0;
+}
+
+.supportH2Style,
+.changePStyle {
+    font-family: "Oswald";
+    font-size: 1.38rem;
+    color: #cdbdbb;
+}
+
+
+.changePStyle {
+    padding: 0 0 .4rem 0;
+    margin: 0 0 0.5rem 0;
+}
+
+.btnTextGive,
+.btnTextCampaign,
+.btnTextConference {
+    background-size: cover;
+    /* height: 102px; */
+    /* width: 130%; */
+    color: #102a57;
+    margin: 0;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+
+.btnTextVender {
+    color: #4a2864;
+}
+
+.btnTextH3 {
+    font-size: .9rem;
+    color: rgb(210, 210, 210);
+    font-weight: normal;
+    text-align: center;
+}
+
+.btnStrip,
+.btnStrip2,
+.btnStrip3 {
+    text-align: center;
+    background-color: #c2c3c2d6;
+    background-image: url("../../images/mobile-donate/lightBack-rev.jpg");
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.btnStrip2 {
+    margin-top: 1rem;
+    background-color: #aa0770;
+}
+
+.btnStrip3 {
+    margin-top: 1rem;
+}
+
+
+
+.btnStripVender {
+    background-color: #e1b885c9;
+}
+
+.divider {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    background-image: url("../../images/divider.png");
+    background-size: 91%;
+    background-position: 24px 46%;
+    position: relative;
+    background-color: transparent;
+    top: -1rem;
+    z-index: 1;
+}
+
+.divider2 {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    background-image: url("../../images/divider2.png");
+    background-size: 107%;
+    background-position: 0px 61%;
+    position: relative;
+    background-color: transparent;
+    top: 0.1rem;
+    z-index: 1;
+}
+
+@media screen and (min-width:373px) {
+
+    .cardWrapper {
+        padding: 1.5rem 1.1rem;
+    }
+
+    .supportH2Style {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width:414px) {}
+
+@media screen and (min-width:450px) {
+
+
+    .cardWrapper,
+    .cardChangeWrapper {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .supportH2Style {
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (min-width:600px) {
+
+    .btnStrip,
+    .btnStrip2 {
+        padding: 3rem;
+    }
+
+    .cardWrapper,
+    .cardChangeWrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    .cardChangeWrapper {
+        width: 451px;
+    }
+
+    .supportStyle,
+    .campTitleStyle {
+        font-size: 6rem;
+    }
+
+    .campSubTitleStyle {
+        font-size: 1.3rem;
+    }
+
+    .supportH2Style,
+    .changePStyle {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (min-width:730px) {
+
+    .cardWrapper p,
+    .cardChangeWrapper p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .clickHereWrapper,
+    .cardChangeWrapper {
+        margin-top: .4rem;
+    }
+
+    .cardWrapper {
+        padding: 2.5rem 1rem;
+    }
+
+    .cardChangeWrapper {
+        width: 100%;
+    }
+
+    .clickHereBtn {
+        padding: 1rem;
+    }
+
+    .btnStrip,
+    .btnStrip2 {
+        padding: 2rem 1rem;
+    }
+
+    .btnStrip2 {
+        align-items: normal;
+    }
+
+}
+
+@media screen and (min-width: 1022px) {
+
+    .supportStyle,
+    .campTitleStyle {
+        font-size: 8rem;
+    }
+
+    .supportH2Style, .campSubTitleStyle {
+        font-size: 2.5rem
+    }
+
+    .cardWrapper p {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding: 0 5.5rem 0.5rem 5.5rem;
+    }
+}
+
+@media screen and (min-width: 1022px) {
+
+    .cardChangeWrapper p,
+    .cardWrapper p {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        /* padding: 0 12.5rem 0.5rem 12.5rem; */
+    }
+
+    .cardChangeWrapper p {
+        line-height: 1.2rem;
+    }
+
+
+    .supportStyle,
+    .campTitleStyle {
+        font-size: 10rem;
+    }
+
+    .supportH2Style,
+    .changePStyle {
+        font-size: 3rem
+    }
+
+    .campSubTitleStyle {
+        font-size: 2rem;
+    }
+
+    .changePStyle {
+        margin: 0 0 2rem 0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .cardWrapper p {
+        padding: 0 7.5rem 0.5rem 7.5rem;
+    }
+}
