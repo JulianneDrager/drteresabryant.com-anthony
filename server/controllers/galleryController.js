@@ -7,27 +7,33 @@ const fs = require('fs');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'upoloads');
+        cb(null, 'uploads');
     },
     filename: (req, file, cb) => {
-        cb(null, file.filename + '-' + Date.now());
+        cb(null, file.originalname + '-' + Date.now());
     }
 });
 
 const upload = multer({ storage }).single('img');
 
 // Handle the GET request for the image
-router.get('/gallery', (req, res) => {
-    Image.find({}, (err, data) => {
-        if (err) {
-            console.log(err);
-        }
-        res.render('contentPage', { items: data });
-    });
-});
+router.get('/', async (req, res) => {
+    try {
+      const images = await Gallery.find({});
+  
+      if (!images) {
+        return res.status(404).json({ error: 'No images found in the gallery.' });
+      }
+  
+      res.status(200).json(images);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'An error occurred while fetching images.' });
+    }
+  });
 
 // Handle the POST request for image upload
-router.put('/upload', async (req, res, next) => {
+router.post('/upload', async (req, res, next) => {
     try {
         upload(req, res, async (err) => {
             if (err) {
@@ -40,11 +46,12 @@ router.put('/upload', async (req, res, next) => {
             const obj = {
                 img: {
                     data: fs.readFileSync(path.join(__dirname, '../uploads/' + req.file.filename)),
-                    contentType: req.file.mimetype,
+                    contentType: 'image/png',
+                    filename: req.file.filename,
                 }
             };
         
-            await Image.create(obj);
+            await Gallery.create(obj);
 
             res.status(200).json({ message: 'Image uploaded to the gallery successfully.' });
           });
@@ -58,7 +65,7 @@ router.put('/upload', async (req, res, next) => {
 });
 
 // Handle the PUT request for updating an image by ID
-router.put('/update/:id', async (req, res) => {
+router.put('/edit/:id', async (req, res) => {
     try {
         const imageId = req.params.id;
         const { img } = req.body;
@@ -67,7 +74,7 @@ router.put('/update/:id', async (req, res) => {
             img,
         };
 
-        const updatedImage = await Image.findByIdAndUpdate(imageId, updatedData, { new: true });
+        const updatedImage = await Gallery.findByIdAndUpdate(imageId, updatedData, { new: true });
 
         if (!updatedImage) {
             return res.status(404).json({ error: 'Image not found in the gallery.' });

@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true,
 }));
-app.use('/public', express.static(__dirname + '/public'));
+app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,
@@ -21,7 +21,7 @@ app.use(logger('dev'));
 
 // Routers
 const adminRouter = require('./routes/adminRouter');
-// const galleryRouter = require('./routes/galleryRouter');
+const galleryRouter = require('./routes/galleryRouter');
 
 app.use('/admin', adminRouter);
 app.use('/gallery', galleryRouter);

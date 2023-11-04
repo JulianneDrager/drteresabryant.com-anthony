@@ -4,6 +4,7 @@ const GallerySchema = new mongoose.Schema({
     img: {
         data: Buffer,
         contentType: String,
+        filename: String,
     },
 });
 
